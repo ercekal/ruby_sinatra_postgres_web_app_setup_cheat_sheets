@@ -90,7 +90,7 @@ Setting up the project
 
 17. Make sure your are correctly set up for different environments. You should see something like `ENV['RACK_ENV'] = 'test'` in your `spec_helper.rb` file. Don't forget to require the relevant files. In your `app.rb` file add `ENV["RACK_ENV"] ||= "development"` --> that makes sure that you run the development environment by default.
 
-18. Add `require 'database_cleaner'` to your spec_helper. And the following code after `Rspec.configure do |config|`:
+18. Add `require 'database_cleaner'` to your spec_helper. And the following code after `RSpec.configure do |config|`:
 
   ``` ruby
   config.before(:suite) do
